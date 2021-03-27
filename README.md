@@ -35,3 +35,9 @@ TBD
 ## Adjustment
 
 TBD
+
+## Reference documentation
+
+* [CTI OSC5A2B02 datasheet](data/cti-osc5a2b02-datasheet.pdf)
+* [CTI OSC5A2B02 drawings](data/cti-osc5a2b02-drawing.jpg)
+* [MAX6064 datasheet](data/max606x-datasheet.pdf)
