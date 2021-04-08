@@ -9,7 +9,7 @@ reference.
 
 ## Notes
 
-Status: ALPHA untested.
+Status: BETA
 
 KiCad project will be uploaded here eventually but Gerbers only for now.
 
@@ -22,11 +22,23 @@ KiCad project will be uploaded here eventually but Gerbers only for now.
 | O1 | CTI OSC5A2B02 |
 | U1 | MAX6064BEUR+T |
 | RV1 | 5K Bourns 3296Y vertical |
-| J1-4 | standard 2.54mm header pins |
+| J1-4 | standard 2.54mm header pins (8 needed in total) |
 
 ## Construction
 
-TBD
+1. Obtain the parts.
+2. Install C1-6
+3. Install L1
+4. Install U1
+5. Install J1-4 so they stick out from the bottom.
+6. Remove the plastic spacers off 4 more pins and push onto the protruding pins to raise the height of the board from the host counter.
+7. Install RV1
+8. Orient the board SMD parts facing you, text upright and apply 5v to the top right (+) and middle right pins (-)
+9. Measure voltage at U1/C6 junction. Should be approx 4V
+10. Install O1.
+11. Reconnect 5v supply and validate current < 600mA and > 300mA.
+12. Wait for current to reduce to < 300mA. OCXO should be warm.
+13. Orient the board SMD parts facing you, text upright and connect scope to bottom right pin and ground. Validate 10MHz square wave. Approx 5v p-p.
 
 ## Installation
 
