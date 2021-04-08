@@ -4,14 +4,14 @@ This project allows a cheap CTI OSC5A2B02 to be installed in an HP 5384A,
 5385A or 5386A frequency counter instead of the original crystal or TCXO 
 reference.
 
-![Render 1](images/render-1.png)
-![Render 2](images/render-2.png)
+![Top](images/image-full.jpg)
+![Bottom](images/image-bottom.jpg)
 
 ## Notes
 
-Status: BETA
+Status: **PRODUCTION**
 
-KiCad project will be uploaded here eventually but Gerbers only for now.
+KiCad project will be uploaded here eventually but Gerbers only for now. JLCPCB can provide boards. Don't ask me for any.
 
 ## BOM
 
@@ -19,10 +19,29 @@ KiCad project will be uploaded here eventually but Gerbers only for now.
 | -- | -- |
 | C1-6 | 0805 100nF 50V X7R MLCC |
 | L1 | 1812 1.2uH >800mA i.e. Murata LQH43NH1R2K03L |
-| O1 | CTI OSC5A2B02 |
+| O1 | CTI OSC5A2B02 (available cheaply from eBay and AliExpress sellers) |
 | U1 | MAX6064BEUR+T |
 | RV1 | 5K Bourns 3296Y vertical |
 | J1-4 | standard 2.54mm header pins (8 needed in total) |
+| R95 | 100R 0.25W metal film TH resistor |
+
+## Equipment
+
+* Soldering iron
+* 50MHz+ oscilloscope
+* DMM
+* 10MHz reference for calibration (Leo Bodnar GPSDO)
+* Usual hand tools
+
+## OCXO check out
+
+Before performing this procedure it is advisable to check the OCXO function. If it arrives still soldered to a cut board (mine did), desolder it carefully.
+
+1. Refer to the datasheet in the reference documentation section.
+2. Attach 5v power supply to the OCXO
+3. Attach oscilloscope 10x probe to the output/ground.
+4. Check OCXO heats
+5. Check OCXO output at 10MHz.
 
 ## Construction
 
@@ -42,11 +61,34 @@ KiCad project will be uploaded here eventually but Gerbers only for now.
 
 ## Installation
 
-TBD
+1. Remove vinyl strips from side of counter
+2. Remove feet
+3. Remove 4 fixing screws in base
+4. Release top of unit and slide off vertically
+5. Remove 4 black mounting posts and two spring clips from side of unit
+6. Remove two fixing screws holding base of case onto PCB
+7. Remove base of case from PCB
+8. As per service manual 2-52, remove C61-66, R96-99, R110, Q13, Q14, Y1C, W2. This is easier done if the GPIB interface card is removed first. If your counter has the TCXO, you only need to remove Y1B, R95 and W2.
+9. Jumper L5 (short)
+10. Replace R95 with 100R 0.25W.
+11. Place in bottom of case and reinstall the two fixing screws.
+
+## Test procedure
+
+1. Make sure reference switch on rear is set to internal.
+2. Connect the mains but do not power the unit up.
+3. Check that the OCXO module is warming up (finger is fine) in standby mode. 
+4. Power up the unit.
+5. Press CHECK on the front panel and make sure it reads 10.00000MHz
+6. Reinstall GPIB board and proceed to adjustment section.
 
 ## Adjustment
 
-TBD
+1. Connect the counter reference output to your oscilloscope X channel
+2. Connect your frequency standard output to your oscilloscope Y channel
+3. Leave both units to warm for 2-4 hours.
+4. Put the oscilloscope into X-Y mode and adjust gain until a loop is displayed.
+5. Adjust the trimpot on the counter until the lissajous pattern is stable. This means both signals are at the same frequency.
 
 ## Reference documentation
 
