@@ -71,7 +71,8 @@ Before performing this procedure it is advisable to check the OCXO function. If 
 8. As per service manual 2-52, remove C61-66, R96-99, R110, Q13, Q14, Y1C, W2. This is easier done if the GPIB interface card is removed first. If your counter has the TCXO, you only need to remove Y1B, R95 and W2.
 9. Jumper L5 (short)
 10. Replace R95 with 100R 0.25W.
-11. Place in bottom of case and reinstall the two fixing screws.
+11. Install the PCB in the position marked OVEN OSCILLATOR.
+12. Place in bottom of case and reinstall the two fixing screws.
 
 ## Test procedure
 
