@@ -11,7 +11,10 @@ reference.
 
 Status: **PRODUCTION**
 
-KiCad project will be uploaded here eventually but Gerbers only for now. JLCPCB can provide boards. Don't ask me for any.
+* Gerbers are available in [gerbers/](gerbers/)
+* KiCad project avalable shortly.
+* JLCPCB can provide boards.
+* Please don't ask me for any boards or parts!
 
 ## BOM
 
