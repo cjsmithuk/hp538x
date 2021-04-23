@@ -12,7 +12,7 @@ reference.
 Status: **PRODUCTION**
 
 * Gerbers are available in [gerbers/](gerbers/)
-* KiCad project avalable shortly.
+* KiCad project avalable in [kicad/](kicad/)
 * JLCPCB can provide boards.
 * Please don't ask me for any boards or parts!
 
